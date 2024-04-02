@@ -1,0 +1,10 @@
+###
+
+POST http://localhost:4004/odata/v4/catalog/Employees
+Content-Type: application/json
+
+{
+    "name" : "Varun G",
+    "empid" : "10XX",
+    "dob" : null
+}

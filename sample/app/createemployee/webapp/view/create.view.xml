@@ -1,0 +1,52 @@
+<mvc:View controllerName="createemployee.controller.create"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <f:SimpleForm id="SimpleFormDisplay354"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+
+				<Label text="Name" />
+				<Input
+				placeholder="Enter Name"
+				maxlength="10"
+                value="{gModel>/payload/name}"/>
+
+				<Label text="Employee ID" />
+				<Input
+				placeholder="Enter ID"
+				maxlength="10"
+                value="{gModel>/payload/empid}"/>
+
+				<Label text="Date" />
+				<DatePicker
+					placeholder="Enter Date"
+                    valueFormat="yyyy-MM-dd"
+                    value="{gModel>/payload/dob}"
+					/>
+			</f:content>
+		</f:SimpleForm>
+        <footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="Accept" press="onSubmit"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>
